@@ -50,16 +50,6 @@ async function main() {
       })
     })
   }
-  const result = child_process.spawnSync(
-    tscPath,
-    process.argv.slice(2),
-    { stdio: 'inherit', cwd, shell: true }
-  )
-
-  if (result.status !== 0) {
-    console.error('tsc failed')
-    process.exit(result.status)
-  }
 
   const outDir = tsconfig.compilerOptions.outDir
   const srcDir = tsconfig.compilerOptions.rootDir
@@ -84,7 +74,20 @@ async function main() {
     )
   })
 
-  console.log('TypeScript Compile and Copy Assets Successfully')
+  console.log('copyfiles done')
+  
+  const result = child_process.spawnSync(
+    tscPath,
+    process.argv.slice(2),
+    { stdio: 'inherit', cwd, shell: true }
+  )
+
+  if (result.status !== 0) {
+    console.error('tsc failed')
+    process.exit(result.status)
+  }
+
+  console.log('tsc done')
 }
 main().catch(err => {
   console.error('Fatal error:', err)
