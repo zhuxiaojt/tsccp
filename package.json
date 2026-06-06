@@ -1,0 +1,20 @@
+{
+  "name": "@zhuxiaojt/tsccp",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "tsccp": "./bin/tsccp.mjs"
+  },
+  "scripts": {},
+  "keywords": [
+    "typescript",
+    "cli",
+    "build"
+  ],
+  "author": "zhuxiaojt",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
