@@ -16,7 +16,14 @@ async function main() {
     process.exit(1)
   }
 
-  const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf-8'))
+  let tsconfig = null
+  try {
+    tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf-8'))
+  } catch (error) {
+    console.error('tsconfig.json is not valid JSON')
+    process.exit(1)
+  }
+
   const tscPath = path.join(binPath, os.platform() === 'win32' ? 'tsc.cmd' : 'tsc')
   if (!fs.existsSync(tscPath)) {
     console.log('Error: TypeScript Compiler not found')
@@ -46,7 +53,7 @@ async function main() {
   const result = child_process.spawnSync(
     tscPath,
     process.argv.slice(2),
-    { stdio: 'inherit', cwd }
+    { stdio: 'inherit', cwd, shell: true }
   )
 
   if (result.status !== 0) {
@@ -79,4 +86,7 @@ async function main() {
 
   console.log('TypeScript Compile and Copy Assets Successfully')
 }
-main()
+main().catch(err => {
+  console.error('Fatal error:', err)
+  process.exit(1)
+})
