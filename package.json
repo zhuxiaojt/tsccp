@@ -12,6 +12,10 @@
     "build"
   ],
   "author": "zhuxiaojt",
+  "repository": "https://github.com/zhuxiaojt/tsccp",
+  "bugs": {
+    "url": "https://github.com/zhuxiaojt/tsccp/issues"
+  },
   "license": "MIT",
   "type": "module",
   "dependencies": {
