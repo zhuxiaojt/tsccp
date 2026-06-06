@@ -1,7 +1,7 @@
 {
   "name": "@zhuxiaojt/tsccp",
-  "version": "0.0.10",
-  "description": "",
+  "version": "0.1.0",
+  "description": "TypeScript compiler and asset copier",
   "bin": {
     "tsccp": "bin/tsccp"
   },
