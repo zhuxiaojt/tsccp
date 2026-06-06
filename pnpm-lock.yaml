@@ -210,9 +210,6 @@ importers:
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
-      typescript:
-        specifier: ^6.0.3
-        version: 6.0.3
 
 packages:
 
@@ -329,11 +326,6 @@ packages:
 
   through2@2.0.1:
     resolution: {integrity: sha512-/vp02SIbpmVHapNMjox4hDBzykPdAOmH5y3INcKaxGfpEPSCMqzdWXyGfqPYyxoBLo1JpxBrlh3Z9esv0vWUYw==}
-
-  typescript@6.0.3:
-    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   untildify@4.0.0:
     resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
@@ -489,8 +481,6 @@ snapshots:
     dependencies:
       readable-stream: 2.0.6
       xtend: 4.0.2
-
-  typescript@6.0.3: {}
 
   untildify@4.0.0: {}
 
