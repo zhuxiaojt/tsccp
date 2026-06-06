@@ -1,9 +1,9 @@
 {
   "name": "@zhuxiaojt/tsccp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "bin": {
-    "tsccp": "./bin/tsccp.js"
+    "tsccp": "./bin/tsccp"
   },
   "scripts": {},
   "keywords": [
