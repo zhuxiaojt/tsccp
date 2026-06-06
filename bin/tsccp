@@ -72,7 +72,7 @@ async function main() {
   await new Promise((resolve, reject) => {
     copyfiles(
       [path.join(srcDir, '**', '*'), outDir],
-      { all: true, exclude: ['**/*.ts', '**/*.mts', '**/*.cts'] },
+      { all: true, exclude: ['**/*.ts', '**/*.mts', '**/*.cts'], up: 1 },
       (err) => {
         if (err) {
           console.error('copyfiles failed: ', err)
